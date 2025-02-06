@@ -188,7 +188,7 @@
 
             <li class="navbar-item">
               <button class="navbar-link" id="theme-toggle">
-                <ion-icon name="sunny-outline"></ion-icon>
+                <ion-icon id="theme-icon" name="sunny-outline"></ion-icon>
               </button>
             </li>
           </ul>
@@ -363,7 +363,7 @@
         
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Manene Junior’s expertise in branding and design helped elevate our company’s image. His professionalism, creativity, and dedication ensured that our corporate identity stood out. We highly recommend his services.
+                    Manene Junior's expertise in branding and design helped elevate our company's image. His professionalism, creativity, and dedication ensured that our corporate identity stood out. We highly recommend his services.
                   </p>
                 </div>
               </div>
@@ -386,7 +386,7 @@
         
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Manene Junior delivered outstanding work on our corporate branding project. His innovative approach and deep understanding of design principles helped create a unique and impactful identity for our company. We couldn’t be happier with the results.
+                    Manene Junior delivered outstanding work on our corporate branding project. His innovative approach and deep understanding of design principles helped create a unique and impactful identity for our company. We couldn't be happier with the results.
                   </p>
                 </div>
               </div>
@@ -562,15 +562,15 @@
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Frontend Developer at Italos</h4>
-              <span>2021 — 2023</span>
+              <span>2024 — 2025</span>
               <p class="timeline-text">
                 Designed and developed interactive web interfaces using React and Bootstrap. Collaborated with designers and backend developers to enhance user experience.
               </p>
             </li>
       
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Fullstack Developer at Akashi</h4>
-              <span>2020 — 2021</span>
+              <h4 class="h4 timeline-item-title">Fullstack Developer at Intellix</h4>
+              <span>2024 — Present</span>
               <p class="timeline-text">
                 Developed and maintained both frontend and backend components for web applications. Worked with multiple technologies to build scalable and efficient systems.
               </p>
@@ -578,7 +578,7 @@
       
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Project Leader</h4>
-              <span>2022 — Present</span>
+              <span>2024 — Present</span>
               <p class="timeline-text">
                 Managed software development projects, coordinated team efforts, and ensured successful execution of project goals.
               </p>
@@ -586,7 +586,7 @@
       
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Web Designer</h4>
-              <span>2018 — Present</span>
+              <span>2023 — Present</span>
               <p class="timeline-text">
                 Created visually appealing and user-friendly website designs, ensuring seamless UI/UX experiences.
               </p>
@@ -1197,5 +1197,31 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+      const themeToggleButton = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const body = document.body;
+
+      themeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('light-mode')) {
+          themeIcon.setAttribute('name', 'moon-outline');
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeIcon.setAttribute('name', 'sunny-outline');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      window.addEventListener('load', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          body.classList.add('light-mode');
+          themeIcon.setAttribute('name', 'moon-outline');
+        }
+      });
+    </script>
   </body>
 </html>

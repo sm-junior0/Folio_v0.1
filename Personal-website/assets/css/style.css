@@ -1909,3 +1909,82 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+#theme-toggle {
+  background: none; /* Remove default button background */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Adjust icon size */
+  color: inherit; /* Inherit color from parent */
+}
+
+#theme-icon {
+  transition: transform 0.3s; /* Smooth transition for icon */
+}
+
+/* Default Dark Mode Styles */
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.navbar {
+  background-color: #1e1e1e; /* Dark navbar background */
+}
+
+.sidebar {
+  background-color: #2c2c2c; /* Dark sidebar background */
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #d4f39c; /* Light background */
+  color: #000000; /* Dark text for body */
+}
+
+.light-mode .navbar {
+  background-color: #f8f9fa; /* Light navbar background */
+  color: #000000; /* Dark text for navbar */
+}
+
+.light-mode .sidebar {
+  background-color: #f1f1f1; /* Light sidebar background */
+  color: #000000; /* Dark text for sidebar */
+}
+
+.light-mode .sidebar-info {
+  background-color: #e0e0e0; /* Light background for sidebar content */
+  color: #000000; /* Dark text for sidebar content */
+}
+
+/* Content Sections */
+.light-mode .about,
+.light-mode .resume,
+.light-mode .portfolio,
+.light-mode .blog,
+.light-mode .contact,
+.light-mode .skills {
+  background-color: #ffffff; /* White background for content sections */
+  color: #000000; /* Dark text for content sections */
+  padding: 20px; /* Add some padding for better spacing */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Skills Section Specific Styles */
+.light-mode .skills {
+  /* Additional styles for the skills section if needed */
+}
+
+/* Button and Icon Styles */
+#theme-toggle {
+  background: none; /* Remove default button background */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Adjust icon size */
+  color: inherit; /* Inherit color from parent */
+}
+
+#theme-icon {
+  transition: transform 0.3s; /* Smooth transition for icon */
+}
